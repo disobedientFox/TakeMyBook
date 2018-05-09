@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace TakeMyBook
 {
@@ -8,10 +9,11 @@ namespace TakeMyBook
     /// </summary>
     public class Reader
     {
+        [Key]
+        public int id { get; set; }
         public string name { get; set; }
         public int receivedPoints { get; set; }
         public int spentPoints { get; set; }
-        public int score { get; set; }
         public ICollection<Book> books { get; set; }
     }
 }

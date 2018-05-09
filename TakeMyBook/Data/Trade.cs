@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace TakeMyBook
 {
@@ -7,6 +8,8 @@ namespace TakeMyBook
     /// </summary>
     public class Trade
     {
+        [Key]
+        public int id { get; set; }
         public Book book { get; set; }
         public Reader reader { get; set; }
         public Department department { get; set; }
