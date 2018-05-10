@@ -12,6 +12,8 @@ namespace TakeMyBook
         [Key]
         public int id { get; set; }
         public string name { get; set; }
+        public string nickname { get; set; }
+        public string password { get; set; }
         public int receivedPoints { get; set; }
         public int spentPoints { get; set; }
         public ICollection<Book> books { get; set; }

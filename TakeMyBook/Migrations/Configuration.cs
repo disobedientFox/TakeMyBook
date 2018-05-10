@@ -14,6 +14,7 @@ namespace TakeMyBook.Migrations
 
         protected override void Seed(TakeMyBook.BooksContext context)
         {
+            /*
             context.Books.Add(
                 new Book()
                 {
@@ -68,7 +69,7 @@ namespace TakeMyBook.Migrations
                     spentPoints = 300
                 });
 
-            context.SaveChanges();
+            context.SaveChanges();*/
         }
     }
 }
