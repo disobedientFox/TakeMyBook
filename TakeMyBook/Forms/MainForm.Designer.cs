@@ -41,11 +41,6 @@
             this.pagesTextLabel = new System.Windows.Forms.Label();
             this.pagesLabel = new System.Windows.Forms.Label();
             this.menuPanel = new System.Windows.Forms.Panel();
-            this.tradesControl = new TakeMyBook.TradesControl();
-            this.settingsControl = new TakeMyBook.SettingsControl();
-            this.giveControl = new TakeMyBook.GiveControl();
-            this.departmentsControl = new TakeMyBook.DepartmentsControl();
-            this.takeControl = new TakeMyBook.TakeControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -108,7 +103,6 @@
             this.takeLabel.Size = new System.Drawing.Size(53, 27);
             this.takeLabel.TabIndex = 10;
             this.takeLabel.Text = "Take";
-            this.takeLabel.Click += new System.EventHandler(this.takeLabel_Click);
             // 
             // giveLabel
             // 
@@ -120,7 +114,6 @@
             this.giveLabel.Size = new System.Drawing.Size(55, 27);
             this.giveLabel.TabIndex = 11;
             this.giveLabel.Text = "Give";
-            this.giveLabel.Click += new System.EventHandler(this.giveLabel_Click);
             // 
             // tradesLabel
             // 
@@ -132,7 +125,6 @@
             this.tradesLabel.Size = new System.Drawing.Size(73, 27);
             this.tradesLabel.TabIndex = 12;
             this.tradesLabel.Text = "Trades";
-            this.tradesLabel.Click += new System.EventHandler(this.tradesLabel_Click);
             // 
             // departmentsLabel
             // 
@@ -144,7 +136,6 @@
             this.departmentsLabel.Size = new System.Drawing.Size(135, 27);
             this.departmentsLabel.TabIndex = 13;
             this.departmentsLabel.Text = "Departments";
-            this.departmentsLabel.Click += new System.EventHandler(this.departmentsLabel_Click);
             // 
             // SettingsLabel
             // 
@@ -156,7 +147,6 @@
             this.SettingsLabel.Size = new System.Drawing.Size(86, 27);
             this.SettingsLabel.TabIndex = 14;
             this.SettingsLabel.Text = "Settings";
-            this.SettingsLabel.Click += new System.EventHandler(this.SettingsLabel_Click);
             // 
             // pagesTextLabel
             // 
@@ -192,52 +182,12 @@
             this.menuPanel.TabIndex = 17;
             this.menuPanel.Visible = false;
             // 
-            // tradesControl
-            // 
-            this.tradesControl.Location = new System.Drawing.Point(234, 176);
-            this.tradesControl.Name = "tradesControl";
-            this.tradesControl.Size = new System.Drawing.Size(150, 150);
-            this.tradesControl.TabIndex = 22;
-            // 
-            // settingsControl
-            // 
-            this.settingsControl.Location = new System.Drawing.Point(223, 148);
-            this.settingsControl.Name = "settingsControl";
-            this.settingsControl.Size = new System.Drawing.Size(150, 150);
-            this.settingsControl.TabIndex = 21;
-            // 
-            // giveControl
-            // 
-            this.giveControl.Location = new System.Drawing.Point(133, 131);
-            this.giveControl.Name = "giveControl";
-            this.giveControl.Size = new System.Drawing.Size(150, 150);
-            this.giveControl.TabIndex = 20;
-            // 
-            // departmentsControl
-            // 
-            this.departmentsControl.Location = new System.Drawing.Point(42, 111);
-            this.departmentsControl.Name = "departmentsControl";
-            this.departmentsControl.Size = new System.Drawing.Size(150, 150);
-            this.departmentsControl.TabIndex = 19;
-            // 
-            // takeControl
-            // 
-            this.takeControl.Location = new System.Drawing.Point(0, 91);
-            this.takeControl.Name = "takeControl";
-            this.takeControl.Size = new System.Drawing.Size(800, 359);
-            this.takeControl.TabIndex = 18;
-            this.takeControl.Visible = false;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tradesControl);
-            this.Controls.Add(this.settingsControl);
-            this.Controls.Add(this.giveControl);
-            this.Controls.Add(this.departmentsControl);
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.pagesLabel);
             this.Controls.Add(this.pagesTextLabel);
@@ -248,11 +198,9 @@
             this.Controls.Add(this.takeLabel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.takeControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -274,11 +222,6 @@
         private System.Windows.Forms.Label pagesTextLabel;
         private System.Windows.Forms.Label pagesLabel;
         private System.Windows.Forms.Panel menuPanel;
-        private TakeMyBook.TakeControl takeControl;
-        private TakeMyBook.DepartmentsControl departmentsControl;
-        private TakeMyBook.GiveControl giveControl;
-        private TakeMyBook.SettingsControl settingsControl;
-        private TakeMyBook.TradesControl tradesControl;
     }
 }
 
