@@ -15,14 +15,14 @@ namespace TakeMyBook
         {
             InitializeComponent();
 
-            using (var ctx = new BooksContext())
+            /*using (var ctx = new BooksContext())
             {
                 if (!ctx.Database.Exists())
                 {
                     var books = ctx.Books.ToList();
                     bookBindingSource.DataSource = books;
                 }
-            }
+            }*/
 
         }
 
