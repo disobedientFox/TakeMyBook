@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MenuControls
+namespace TakeMyBook
 {
     public partial class GiveControl : UserControl
     {

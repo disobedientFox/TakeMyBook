@@ -41,11 +41,11 @@
             this.pagesTextLabel = new System.Windows.Forms.Label();
             this.pagesLabel = new System.Windows.Forms.Label();
             this.menuPanel = new System.Windows.Forms.Panel();
-            this.tradesControl = new MenuControls.TradesControl();
-            this.settingsControl = new MenuControls.SettingsControl();
-            this.giveControl = new MenuControls.GiveControl();
-            this.departmentsControl = new MenuControls.DepartmentsControl();
-            this.takeControl = new MenuControls.TakeControl();
+            this.tradesControl = new TakeMyBook.TradesControl();
+            this.settingsControl = new TakeMyBook.SettingsControl();
+            this.giveControl = new TakeMyBook.GiveControl();
+            this.departmentsControl = new TakeMyBook.DepartmentsControl();
+            this.takeControl = new TakeMyBook.TakeControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -252,6 +252,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -273,11 +274,11 @@
         private System.Windows.Forms.Label pagesTextLabel;
         private System.Windows.Forms.Label pagesLabel;
         private System.Windows.Forms.Panel menuPanel;
-        private MenuControls.TakeControl takeControl;
-        private MenuControls.DepartmentsControl departmentsControl;
-        private MenuControls.GiveControl giveControl;
-        private MenuControls.SettingsControl settingsControl;
-        private MenuControls.TradesControl tradesControl;
+        private TakeMyBook.TakeControl takeControl;
+        private TakeMyBook.DepartmentsControl departmentsControl;
+        private TakeMyBook.GiveControl giveControl;
+        private TakeMyBook.SettingsControl settingsControl;
+        private TakeMyBook.TradesControl tradesControl;
     }
 }
 

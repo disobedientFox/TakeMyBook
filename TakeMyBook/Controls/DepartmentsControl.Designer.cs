@@ -1,4 +1,4 @@
-﻿namespace MenuControls
+﻿namespace TakeMyBook
 {
     partial class DepartmentsControl
     {

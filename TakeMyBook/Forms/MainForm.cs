@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TakeMyBook
@@ -16,7 +9,7 @@ namespace TakeMyBook
         {
             InitializeComponent();
         }
-
+        
         private void minButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -90,6 +83,18 @@ namespace TakeMyBook
             takeControl.Visible = false;
             giveControl.Visible = false;
             settingsControl.Visible = true;
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            /*if (booksDataGridView.Rows.Count == 0)
+            {
+                using (var ctx = new BooksContext())
+                {
+                    var books = ctx.Books.ToList();
+                    booksDataGridView.DataSource = books;
+                }
+            }*/
         }
     }
 }
