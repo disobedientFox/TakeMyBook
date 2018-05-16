@@ -19,7 +19,7 @@ namespace TakeMyBook
         {
             this.Close();
         }
-
+        /*
         private void takeLabel_Click(object sender, EventArgs e)
         {
             if (menuPanel.Visible == false)
@@ -94,7 +94,7 @@ namespace TakeMyBook
                     var books = ctx.Books.ToList();
                     booksDataGridView.DataSource = books;
                 }
-            }*/
-        }
+            }
+        }*/
     }
 }
