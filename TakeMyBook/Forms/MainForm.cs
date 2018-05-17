@@ -5,13 +5,16 @@ namespace TakeMyBook
 {
     public partial class MainForm : Form
     {
-        DepartmentsControl departmentsControl1 = new DepartmentsControl();
-
         public MainForm()
         {
 
             InitializeComponent();
             pagesLabel.Text = ReaderInfo.score.ToString();
+            settingsControl.Visible = false;
+            giveControl.Visible = false;
+            tradesControl.Visible = false;
+            departmentsControl.Visible = false;
+            takeControl.Visible = false;
         }
         
         private void minButton_Click(object sender, EventArgs e)
@@ -100,5 +103,6 @@ namespace TakeMyBook
                 }
             }*/
         }
+
     }
 }

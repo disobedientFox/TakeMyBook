@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TakeMyBook.Forms
@@ -34,6 +28,10 @@ namespace TakeMyBook.Forms
                     MainForm mainForm = new MainForm();
                     mainForm.Show();
                     Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect password", "Something went wrong :c");
                 }
             }
             catch

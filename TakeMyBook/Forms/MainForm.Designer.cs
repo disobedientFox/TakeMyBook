@@ -41,11 +41,11 @@
             this.pagesTextLabel = new System.Windows.Forms.Label();
             this.pagesLabel = new System.Windows.Forms.Label();
             this.menuPanel = new System.Windows.Forms.Panel();
-            this.departmentsControl = new TakeMyBook.DepartmentsControl();
-            this.takeControl = new TakeMyBook.TakeControl();
             this.tradesControl = new TakeMyBook.TradesControl();
             this.settingsControl = new TakeMyBook.SettingsControl();
             this.giveControl = new TakeMyBook.GiveControl();
+            this.departmentsControl = new TakeMyBook.DepartmentsControl();
+            this.takeControl = new TakeMyBook.TakeControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -172,15 +172,18 @@
             // 
             // pagesLabel
             // 
+            this.pagesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pagesLabel.AutoSize = true;
             this.pagesLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
             this.pagesLabel.Font = new System.Drawing.Font("Lato Thin", 17F, System.Drawing.FontStyle.Bold);
             this.pagesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
-            this.pagesLabel.Location = new System.Drawing.Point(376, 60);
+            this.pagesLabel.Location = new System.Drawing.Point(368, 50);
             this.pagesLabel.Name = "pagesLabel";
-            this.pagesLabel.Size = new System.Drawing.Size(54, 28);
+            this.pagesLabel.Padding = new System.Windows.Forms.Padding(5);
+            this.pagesLabel.Size = new System.Drawing.Size(64, 38);
             this.pagesLabel.TabIndex = 16;
-            this.pagesLabel.Text = "test";
+            this.pagesLabel.Text = "655";
             this.pagesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // menuPanel
@@ -191,6 +194,29 @@
             this.menuPanel.Size = new System.Drawing.Size(91, 2);
             this.menuPanel.TabIndex = 17;
             this.menuPanel.Visible = false;
+            // 
+            // tradesControl
+            // 
+            this.tradesControl.Location = new System.Drawing.Point(0, 113);
+            this.tradesControl.Name = "tradesControl";
+            this.tradesControl.Size = new System.Drawing.Size(788, 325);
+            this.tradesControl.TabIndex = 21;
+            this.tradesControl.trades = null;
+            // 
+            // settingsControl
+            // 
+            this.settingsControl.Location = new System.Drawing.Point(12, 126);
+            this.settingsControl.Name = "settingsControl";
+            this.settingsControl.Size = new System.Drawing.Size(776, 297);
+            this.settingsControl.TabIndex = 20;
+            // 
+            // giveControl
+            // 
+            this.giveControl.departments = null;
+            this.giveControl.Location = new System.Drawing.Point(12, 126);
+            this.giveControl.Name = "giveControl";
+            this.giveControl.Size = new System.Drawing.Size(776, 325);
+            this.giveControl.TabIndex = 19;
             // 
             // departmentsControl
             // 
@@ -209,29 +235,6 @@
             this.takeControl.Size = new System.Drawing.Size(800, 350);
             this.takeControl.TabIndex = 22;
             // 
-            // tradesControl
-            // 
-            this.tradesControl.Location = new System.Drawing.Point(0, 113);
-            this.tradesControl.Name = "tradesControl";
-            this.tradesControl.Size = new System.Drawing.Size(788, 338);
-            this.tradesControl.TabIndex = 21;
-            this.tradesControl.trades = null;
-            // 
-            // settingsControl
-            // 
-            this.settingsControl.Location = new System.Drawing.Point(318, 243);
-            this.settingsControl.Name = "settingsControl";
-            this.settingsControl.Size = new System.Drawing.Size(150, 150);
-            this.settingsControl.TabIndex = 20;
-            // 
-            // giveControl
-            // 
-            this.giveControl.departments = null;
-            this.giveControl.Location = new System.Drawing.Point(12, 126);
-            this.giveControl.Name = "giveControl";
-            this.giveControl.Size = new System.Drawing.Size(776, 325);
-            this.giveControl.TabIndex = 19;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,11 +251,11 @@
             this.Controls.Add(this.takeLabel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.tradesControl);
             this.Controls.Add(this.settingsControl);
             this.Controls.Add(this.giveControl);
             this.Controls.Add(this.departmentsControl);
             this.Controls.Add(this.takeControl);
+            this.Controls.Add(this.tradesControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

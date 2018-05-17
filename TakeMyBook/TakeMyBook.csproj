@@ -136,6 +136,9 @@
     <EmbeddedResource Include="Controls\GiveControl.resx">
       <DependentUpon>GiveControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SettingsControl.resx">
+      <DependentUpon>SettingsControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\TakeControl.resx">
       <DependentUpon>TakeControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +180,7 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Book.datasource" />
+    <None Include="Properties\DataSources\Trade.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
