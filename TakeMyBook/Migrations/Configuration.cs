@@ -69,6 +69,18 @@ namespace TakeMyBook.Migrations
                     spentPoints = 300
                 });
 
+            context.SaveChanges();
+            var department = new Department
+            {
+                country = "Poland",
+                city = "Rzeszow",
+                address = "35-120 Krola Augusta 23a",
+                openingHours = "09:00 17:00",
+                books = context.Books.ToList()
+            };
+            context.Departments.Add(department);
+
+
             context.SaveChanges();*/
         }
     }

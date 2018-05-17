@@ -17,5 +17,6 @@ namespace TakeMyBook
         public int receivedPoints { get; set; }
         public int spentPoints { get; set; }
         public ICollection<Book> books { get; set; }
+        public Department department { get; set; }
     }
 }

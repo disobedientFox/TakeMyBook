@@ -5,9 +5,13 @@ namespace TakeMyBook
 {
     public partial class MainForm : Form
     {
+        DepartmentsControl departmentsControl1 = new DepartmentsControl();
+
         public MainForm()
         {
+
             InitializeComponent();
+            pagesLabel.Text = ReaderInfo.score.ToString();
         }
         
         private void minButton_Click(object sender, EventArgs e)
@@ -19,7 +23,7 @@ namespace TakeMyBook
         {
             this.Close();
         }
-        /*
+        
         private void takeLabel_Click(object sender, EventArgs e)
         {
             if (menuPanel.Visible == false)
@@ -94,7 +98,7 @@ namespace TakeMyBook
                     var books = ctx.Books.ToList();
                     booksDataGridView.DataSource = books;
                 }
-            }
-        }*/
+            }*/
+        }
     }
 }

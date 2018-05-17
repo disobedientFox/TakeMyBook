@@ -28,10 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.tradesDataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.tradesDataGridView)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // tradesDataGridView
+            // 
+            this.tradesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tradesDataGridView.Location = new System.Drawing.Point(37, 18);
+            this.tradesDataGridView.Name = "tradesDataGridView";
+            this.tradesDataGridView.Size = new System.Drawing.Size(648, 322);
+            this.tradesDataGridView.TabIndex = 0;
+            // 
+            // TradesControl
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.tradesDataGridView);
+            this.Name = "TradesControl";
+            this.Size = new System.Drawing.Size(711, 386);
+            ((System.ComponentModel.ISupportInitialize)(this.tradesDataGridView)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView tradesDataGridView;
     }
 }

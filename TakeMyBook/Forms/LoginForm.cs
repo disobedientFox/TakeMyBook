@@ -26,6 +26,10 @@ namespace TakeMyBook.Forms
                 var reader = context.Readers.ToList().Single(r => r.nickname == nicknameTextBox.Text);
                 if (PasswordManager.VerifyHashedPassword(reader.password, passwordTtextBox.Text))
                 {
+                    ReaderInfo.nicknameReader = reader.nickname;
+                    ReaderInfo.departmentReader = reader.department;
+                    ReaderInfo.score = reader.receivedPoints - reader.spentPoints;
+                    ReaderInfo.idReader = reader.id;
                     this.Close();
                     MainForm mainForm = new MainForm();
                     mainForm.Show();

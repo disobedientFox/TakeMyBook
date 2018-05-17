@@ -41,11 +41,11 @@
             this.pagesTextLabel = new System.Windows.Forms.Label();
             this.pagesLabel = new System.Windows.Forms.Label();
             this.menuPanel = new System.Windows.Forms.Panel();
-            this.departmentsControl1 = new TakeMyBook.DepartmentsControl();
-            this.giveControl1 = new TakeMyBook.GiveControl();
-            this.settingsControl1 = new TakeMyBook.SettingsControl();
-            this.tradesControl1 = new TakeMyBook.TradesControl();
-            this.takeControl1 = new TakeMyBook.TakeControl();
+            this.departmentsControl = new TakeMyBook.DepartmentsControl();
+            this.takeControl = new TakeMyBook.TakeControl();
+            this.tradesControl = new TakeMyBook.TradesControl();
+            this.settingsControl = new TakeMyBook.SettingsControl();
+            this.giveControl = new TakeMyBook.GiveControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -108,6 +108,7 @@
             this.takeLabel.Size = new System.Drawing.Size(53, 27);
             this.takeLabel.TabIndex = 10;
             this.takeLabel.Text = "Take";
+            this.takeLabel.Click += new System.EventHandler(this.takeLabel_Click);
             // 
             // giveLabel
             // 
@@ -119,6 +120,7 @@
             this.giveLabel.Size = new System.Drawing.Size(55, 27);
             this.giveLabel.TabIndex = 11;
             this.giveLabel.Text = "Give";
+            this.giveLabel.Click += new System.EventHandler(this.giveLabel_Click);
             // 
             // tradesLabel
             // 
@@ -130,6 +132,7 @@
             this.tradesLabel.Size = new System.Drawing.Size(73, 27);
             this.tradesLabel.TabIndex = 12;
             this.tradesLabel.Text = "Trades";
+            this.tradesLabel.Click += new System.EventHandler(this.tradesLabel_Click);
             // 
             // departmentsLabel
             // 
@@ -141,6 +144,7 @@
             this.departmentsLabel.Size = new System.Drawing.Size(135, 27);
             this.departmentsLabel.TabIndex = 13;
             this.departmentsLabel.Text = "Departments";
+            this.departmentsLabel.Click += new System.EventHandler(this.departmentsLabel_Click);
             // 
             // SettingsLabel
             // 
@@ -152,6 +156,7 @@
             this.SettingsLabel.Size = new System.Drawing.Size(86, 27);
             this.SettingsLabel.TabIndex = 14;
             this.SettingsLabel.Text = "Settings";
+            this.SettingsLabel.Click += new System.EventHandler(this.SettingsLabel_Click);
             // 
             // pagesTextLabel
             // 
@@ -187,40 +192,45 @@
             this.menuPanel.TabIndex = 17;
             this.menuPanel.Visible = false;
             // 
-            // departmentsControl1
+            // departmentsControl
             // 
-            this.departmentsControl1.Location = new System.Drawing.Point(608, 287);
-            this.departmentsControl1.Name = "departmentsControl1";
-            this.departmentsControl1.Size = new System.Drawing.Size(150, 150);
-            this.departmentsControl1.TabIndex = 18;
+            this.departmentsControl.departments = null;
+            this.departmentsControl.Location = new System.Drawing.Point(12, 113);
+            this.departmentsControl.Name = "departmentsControl";
+            this.departmentsControl.Size = new System.Drawing.Size(776, 338);
+            this.departmentsControl.TabIndex = 18;
             // 
-            // giveControl1
+            // takeControl
             // 
-            this.giveControl1.Location = new System.Drawing.Point(364, 272);
-            this.giveControl1.Name = "giveControl1";
-            this.giveControl1.Size = new System.Drawing.Size(150, 150);
-            this.giveControl1.TabIndex = 19;
+            this.takeControl.Books = null;
+            this.takeControl.departments = null;
+            this.takeControl.Location = new System.Drawing.Point(0, 113);
+            this.takeControl.Name = "takeControl";
+            this.takeControl.Size = new System.Drawing.Size(800, 350);
+            this.takeControl.TabIndex = 22;
             // 
-            // settingsControl1
+            // tradesControl
             // 
-            this.settingsControl1.Location = new System.Drawing.Point(318, 243);
-            this.settingsControl1.Name = "settingsControl1";
-            this.settingsControl1.Size = new System.Drawing.Size(150, 150);
-            this.settingsControl1.TabIndex = 20;
+            this.tradesControl.Location = new System.Drawing.Point(0, 113);
+            this.tradesControl.Name = "tradesControl";
+            this.tradesControl.Size = new System.Drawing.Size(788, 338);
+            this.tradesControl.TabIndex = 21;
+            this.tradesControl.trades = null;
             // 
-            // tradesControl1
+            // settingsControl
             // 
-            this.tradesControl1.Location = new System.Drawing.Point(263, 213);
-            this.tradesControl1.Name = "tradesControl1";
-            this.tradesControl1.Size = new System.Drawing.Size(150, 150);
-            this.tradesControl1.TabIndex = 21;
+            this.settingsControl.Location = new System.Drawing.Point(318, 243);
+            this.settingsControl.Name = "settingsControl";
+            this.settingsControl.Size = new System.Drawing.Size(150, 150);
+            this.settingsControl.TabIndex = 20;
             // 
-            // takeControl1
+            // giveControl
             // 
-            this.takeControl1.Location = new System.Drawing.Point(13, 120);
-            this.takeControl1.Name = "takeControl1";
-            this.takeControl1.Size = new System.Drawing.Size(800, 350);
-            this.takeControl1.TabIndex = 22;
+            this.giveControl.departments = null;
+            this.giveControl.Location = new System.Drawing.Point(12, 126);
+            this.giveControl.Name = "giveControl";
+            this.giveControl.Size = new System.Drawing.Size(776, 325);
+            this.giveControl.TabIndex = 19;
             // 
             // MainForm
             // 
@@ -228,11 +238,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.takeControl1);
-            this.Controls.Add(this.tradesControl1);
-            this.Controls.Add(this.settingsControl1);
-            this.Controls.Add(this.giveControl1);
-            this.Controls.Add(this.departmentsControl1);
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.pagesLabel);
             this.Controls.Add(this.pagesTextLabel);
@@ -243,8 +248,14 @@
             this.Controls.Add(this.takeLabel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.tradesControl);
+            this.Controls.Add(this.settingsControl);
+            this.Controls.Add(this.giveControl);
+            this.Controls.Add(this.departmentsControl);
+            this.Controls.Add(this.takeControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -267,11 +278,11 @@
         private System.Windows.Forms.Label pagesTextLabel;
         private System.Windows.Forms.Label pagesLabel;
         private System.Windows.Forms.Panel menuPanel;
-        private DepartmentsControl departmentsControl1;
-        private GiveControl giveControl1;
-        private SettingsControl settingsControl1;
-        private TradesControl tradesControl1;
-        private TakeControl takeControl1;
+        private DepartmentsControl departmentsControl;
+        private GiveControl giveControl;
+        private SettingsControl settingsControl;
+        private TradesControl tradesControl;
+        private TakeControl takeControl;
     }
 }
 

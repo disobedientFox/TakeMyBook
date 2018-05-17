@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.columnComboBox = new System.Windows.Forms.ComboBox();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.booksDataGridView = new System.Windows.Forms.DataGridView();
+            this.takeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.booksDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +61,7 @@
             this.columnComboBox.Name = "columnComboBox";
             this.columnComboBox.Size = new System.Drawing.Size(150, 21);
             this.columnComboBox.TabIndex = 1;
+            this.columnComboBox.SelectedIndexChanged += new System.EventHandler(this.columnComboBox_SelectedIndexChanged);
             // 
             // searchTextBox
             // 
@@ -73,24 +77,56 @@
             this.booksDataGridView.AllowUserToDeleteRows = false;
             this.booksDataGridView.AllowUserToResizeColumns = false;
             this.booksDataGridView.AllowUserToResizeRows = false;
-            this.booksDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.booksDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.booksDataGridView.BackgroundColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.booksDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.booksDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.booksDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            this.booksDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.booksDataGridView.Location = new System.Drawing.Point(189, 22);
             this.booksDataGridView.Name = "booksDataGridView";
             this.booksDataGridView.ReadOnly = true;
+            this.booksDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.booksDataGridView.RowTemplate.ReadOnly = true;
+            this.booksDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.booksDataGridView.Size = new System.Drawing.Size(596, 313);
             this.booksDataGridView.TabIndex = 3;
+            // 
+            // takeButton
+            // 
+            this.takeButton.Location = new System.Drawing.Point(57, 231);
+            this.takeButton.Name = "takeButton";
+            this.takeButton.Size = new System.Drawing.Size(75, 23);
+            this.takeButton.TabIndex = 4;
+            this.takeButton.Text = "Take";
+            this.takeButton.UseVisualStyleBackColor = true;
+            this.takeButton.Click += new System.EventHandler(this.takeButton_Click);
             // 
             // TakeControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.takeButton);
             this.Controls.Add(this.booksDataGridView);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.columnComboBox);
             this.Controls.Add(this.label1);
             this.Name = "TakeControl";
             this.Size = new System.Drawing.Size(800, 350);
-            this.Load += new System.EventHandler(this.TakeControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.booksDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -103,5 +139,6 @@
         private System.Windows.Forms.ComboBox columnComboBox;
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.DataGridView booksDataGridView;
+        private System.Windows.Forms.Button takeButton;
     }
 }
