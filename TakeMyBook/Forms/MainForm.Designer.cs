@@ -46,8 +46,10 @@
             this.giveControl = new TakeMyBook.GiveControl();
             this.departmentsControl = new TakeMyBook.DepartmentsControl();
             this.takeControl = new TakeMyBook.TakeControl();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -197,43 +199,56 @@
             // 
             // tradesControl
             // 
-            this.tradesControl.Location = new System.Drawing.Point(0, 113);
+            this.tradesControl.Location = new System.Drawing.Point(0, 91);
             this.tradesControl.Name = "tradesControl";
-            this.tradesControl.Size = new System.Drawing.Size(788, 325);
+            this.tradesControl.Size = new System.Drawing.Size(800, 359);
             this.tradesControl.TabIndex = 21;
             this.tradesControl.trades = null;
             // 
             // settingsControl
             // 
-            this.settingsControl.Location = new System.Drawing.Point(12, 126);
+            this.settingsControl.departments = null;
+            this.settingsControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.settingsControl.Location = new System.Drawing.Point(0, 91);
+            this.settingsControl.Margin = new System.Windows.Forms.Padding(4);
             this.settingsControl.Name = "settingsControl";
-            this.settingsControl.Size = new System.Drawing.Size(776, 297);
+            this.settingsControl.Size = new System.Drawing.Size(800, 359);
             this.settingsControl.TabIndex = 20;
             // 
             // giveControl
             // 
             this.giveControl.departments = null;
-            this.giveControl.Location = new System.Drawing.Point(12, 126);
+            this.giveControl.Location = new System.Drawing.Point(0, 91);
             this.giveControl.Name = "giveControl";
-            this.giveControl.Size = new System.Drawing.Size(776, 325);
+            this.giveControl.Size = new System.Drawing.Size(800, 359);
             this.giveControl.TabIndex = 19;
             // 
             // departmentsControl
             // 
             this.departmentsControl.departments = null;
-            this.departmentsControl.Location = new System.Drawing.Point(12, 113);
+            this.departmentsControl.Location = new System.Drawing.Point(0, 91);
             this.departmentsControl.Name = "departmentsControl";
-            this.departmentsControl.Size = new System.Drawing.Size(776, 338);
+            this.departmentsControl.Size = new System.Drawing.Size(800, 359);
             this.departmentsControl.TabIndex = 18;
             // 
             // takeControl
             // 
             this.takeControl.Books = null;
             this.takeControl.departments = null;
-            this.takeControl.Location = new System.Drawing.Point(0, 113);
+            this.takeControl.Location = new System.Drawing.Point(0, 91);
             this.takeControl.Name = "takeControl";
-            this.takeControl.Size = new System.Drawing.Size(800, 350);
+            this.takeControl.Size = new System.Drawing.Size(800, 359);
             this.takeControl.TabIndex = 22;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(800, 450);
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
             // 
             // MainForm
             // 
@@ -241,27 +256,29 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.menuPanel);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pagesLabel);
             this.Controls.Add(this.pagesTextLabel);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.SettingsLabel);
             this.Controls.Add(this.departmentsLabel);
             this.Controls.Add(this.tradesLabel);
             this.Controls.Add(this.giveLabel);
             this.Controls.Add(this.takeLabel);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.settingsControl);
             this.Controls.Add(this.giveControl);
             this.Controls.Add(this.departmentsControl);
             this.Controls.Add(this.takeControl);
             this.Controls.Add(this.tradesControl);
+            this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,6 +303,7 @@
         private SettingsControl settingsControl;
         private TradesControl tradesControl;
         private TakeControl takeControl;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
