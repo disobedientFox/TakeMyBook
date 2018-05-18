@@ -60,10 +60,10 @@
             this.addressComboBox.Font = new System.Drawing.Font("Lato Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.addressComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
             this.addressComboBox.FormattingEnabled = true;
-            this.addressComboBox.Location = new System.Drawing.Point(624, 144);
-            this.addressComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addressComboBox.Location = new System.Drawing.Point(616, 144);
+            this.addressComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.addressComboBox.Name = "addressComboBox";
-            this.addressComboBox.Size = new System.Drawing.Size(135, 27);
+            this.addressComboBox.Size = new System.Drawing.Size(156, 27);
             this.addressComboBox.TabIndex = 18;
             this.addressComboBox.SelectedIndexChanged += new System.EventHandler(this.addressComboBox_SelectedIndexChanged);
             // 
@@ -73,10 +73,10 @@
             this.cityComboBox.Font = new System.Drawing.Font("Lato Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cityComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
             this.cityComboBox.FormattingEnabled = true;
-            this.cityComboBox.Location = new System.Drawing.Point(624, 112);
-            this.cityComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cityComboBox.Location = new System.Drawing.Point(616, 112);
+            this.cityComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.cityComboBox.Name = "cityComboBox";
-            this.cityComboBox.Size = new System.Drawing.Size(135, 27);
+            this.cityComboBox.Size = new System.Drawing.Size(156, 27);
             this.cityComboBox.TabIndex = 17;
             this.cityComboBox.SelectedIndexChanged += new System.EventHandler(this.cityComboBox_SelectedIndexChanged);
             // 
@@ -85,10 +85,10 @@
             this.countryComboBox.Font = new System.Drawing.Font("Lato Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.countryComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
             this.countryComboBox.FormattingEnabled = true;
-            this.countryComboBox.Location = new System.Drawing.Point(624, 80);
-            this.countryComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.countryComboBox.Location = new System.Drawing.Point(616, 80);
+            this.countryComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.countryComboBox.Name = "countryComboBox";
-            this.countryComboBox.Size = new System.Drawing.Size(135, 27);
+            this.countryComboBox.Size = new System.Drawing.Size(156, 27);
             this.countryComboBox.TabIndex = 16;
             this.countryComboBox.SelectedIndexChanged += new System.EventHandler(this.countryComboBox_SelectedIndexChanged);
             // 
@@ -96,11 +96,11 @@
             // 
             this.openingHoursTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
             this.openingHoursTextBox.Font = new System.Drawing.Font("Lato Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.openingHoursTextBox.Location = new System.Drawing.Point(624, 200);
-            this.openingHoursTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.openingHoursTextBox.Location = new System.Drawing.Point(616, 200);
+            this.openingHoursTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.openingHoursTextBox.Name = "openingHoursTextBox";
             this.openingHoursTextBox.ReadOnly = true;
-            this.openingHoursTextBox.Size = new System.Drawing.Size(135, 27);
+            this.openingHoursTextBox.Size = new System.Drawing.Size(156, 27);
             this.openingHoursTextBox.TabIndex = 15;
             // 
             // openingHoursTextLabel
@@ -109,7 +109,7 @@
             this.openingHoursTextLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
             this.openingHoursTextLabel.Font = new System.Drawing.Font("Lato Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.openingHoursTextLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
-            this.openingHoursTextLabel.Location = new System.Drawing.Point(639, 179);
+            this.openingHoursTextLabel.Location = new System.Drawing.Point(637, 179);
             this.openingHoursTextLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.openingHoursTextLabel.Name = "openingHoursTextLabel";
             this.openingHoursTextLabel.Size = new System.Drawing.Size(116, 19);
@@ -274,10 +274,10 @@
             this.changeDepartmentButton.FlatAppearance.BorderSize = 0;
             this.changeDepartmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.changeDepartmentButton.ForeColor = System.Drawing.Color.White;
-            this.changeDepartmentButton.Location = new System.Drawing.Point(624, 233);
+            this.changeDepartmentButton.Location = new System.Drawing.Point(616, 233);
             this.changeDepartmentButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.changeDepartmentButton.Name = "changeDepartmentButton";
-            this.changeDepartmentButton.Size = new System.Drawing.Size(135, 31);
+            this.changeDepartmentButton.Size = new System.Drawing.Size(156, 31);
             this.changeDepartmentButton.TabIndex = 29;
             this.changeDepartmentButton.Text = "Change department";
             this.changeDepartmentButton.UseVisualStyleBackColor = false;
@@ -341,7 +341,7 @@
             this.Controls.Add(this.countryLabel);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Lato Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SettingsControl";
             this.Size = new System.Drawing.Size(800, 359);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

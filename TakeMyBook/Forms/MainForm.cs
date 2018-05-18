@@ -1,13 +1,20 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace TakeMyBook
 {
+    public delegate void changeScore();
+
     public partial class MainForm : Form
     {
+        public changeScore changePoints;
+        private bool mouseIsDown = false;
+        private Point firstPoint;
+
         public MainForm()
         {
-
+            changePoints = ChangeScore;
             InitializeComponent();
             pagesLabel.Text = ReaderInfo.score.ToString();
             settingsControl.Visible = false;
@@ -92,17 +99,35 @@ namespace TakeMyBook
             settingsControl.Visible = true;
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
-            /*if (booksDataGridView.Rows.Count == 0)
-            {
-                using (var ctx = new BooksContext())
-                {
-                    var books = ctx.Books.ToList();
-                    booksDataGridView.DataSource = books;
-                }
-            }*/
+            firstPoint = e.Location;
+            mouseIsDown = true;
         }
 
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseIsDown = false;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseIsDown)
+            {
+                // Get the difference between the two points
+                int xDiff = firstPoint.X - e.Location.X;
+                int yDiff = firstPoint.Y - e.Location.Y;
+
+                // Set the new point
+                int x = this.Location.X - xDiff;
+                int y = this.Location.Y - yDiff;
+                this.Location = new Point(x, y);
+            }
+        }
+
+        public void ChangeScore()
+        {
+            pagesLabel.Text = ReaderInfo.score.ToString();
+        }
     }
 }

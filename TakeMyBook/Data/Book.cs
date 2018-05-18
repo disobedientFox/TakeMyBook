@@ -5,6 +5,8 @@ namespace TakeMyBook
     /// <summary>
     /// 
     /// </summary>
+            
+    [DisplayColumn("title")]
     public class Book
     {
         [Key]

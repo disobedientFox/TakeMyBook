@@ -78,12 +78,12 @@ namespace TakeMyBook
             }
             else
             {
-                if (ReaderInfo.departmentReader != null)
+                if (ReaderInfo.departmentReader == 2000)
                     MessageBox.Show("You need enter the department in the settings tab. Just do it, sir", "Something went wrong :c");
                 else
                 {
                     // NEED TO CLEAN
-                    ReaderInfo.departmentReader = departments.Where(d => d.id == 5).Single();
+                    ReaderInfo.departmentReader = departments.Where(d => d.id == 5).Single().id;
                     //------------------------
 
                     int idBook = Convert.ToInt32(booksDataGridView.SelectedRows[0].Cells[0].Value.ToString());

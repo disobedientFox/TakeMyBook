@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TakeMyBook
 {
+    //public delegate void changeScore(int score);
+
+
     public partial class GiveControl : UserControl
     {
+        public changeScore changePoints;
         BooksContext context = new BooksContext();
         public List<Department> departments { get; set; }
 
@@ -36,16 +36,10 @@ namespace TakeMyBook
             }
             else
             {
-                if (ReaderInfo.departmentReader != null)
+                if (ReaderInfo.departmentReader == 2000)
                     MessageBox.Show("You need enter the department in the settings tab. Just do it, sir", "Something went wrong :c");
                 else
                 {
-                    // NEED TO CLEAN
-                    ReaderInfo.departmentReader = departments.Single(d => d.id == 5);
-                    //------------------------
-
-
-
                     Book newBook = new Book
                     {
                         title = titleTextBox.Text,
@@ -62,12 +56,17 @@ namespace TakeMyBook
                         date = DateTime.Today,
                         book = newBook,
                         reader = context.Readers.Where(r => r.nickname.Equals(ReaderInfo.nicknameReader)).Single(),
-                        department = context.Departments.Where(d => d.id.Equals(ReaderInfo.departmentReader.id)).Single(),
+                        department = context.Departments.Where(d => d.id.Equals(ReaderInfo.departmentReader)).Single(),
                         IsGiven = true
                     };
 
                     context.Trades.Add(trade);
-                    
+
+                    var reader = context.Readers.Single(r => r.nickname == ReaderInfo.nicknameReader);
+                    reader.receivedPoints = (int)pagesCountNumericUpDown.Value;
+
+                    ReaderInfo.score = reader.receivedPoints - reader.spentPoints;
+                    changePoints();
 
                     context.SaveChanges();
                 }

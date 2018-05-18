@@ -21,10 +21,10 @@ namespace TakeMyBook.Forms
                 if (PasswordManager.VerifyHashedPassword(reader.password, passwordTtextBox.Text))
                 {
                     ReaderInfo.nicknameReader = reader.nickname;
-                    ReaderInfo.departmentReader = reader.department;
+                    ReaderInfo.departmentReader = reader.department.id;
                     ReaderInfo.score = reader.receivedPoints - reader.spentPoints;
                     ReaderInfo.idReader = reader.id;
-                    this.Close();
+
                     MainForm mainForm = new MainForm();
                     mainForm.Show();
                     Hide();

@@ -51,7 +51,7 @@
             this.titleLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
             this.titleLabel.Font = new System.Drawing.Font("Lato Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.titleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
-            this.titleLabel.Location = new System.Drawing.Point(40, 39);
+            this.titleLabel.Location = new System.Drawing.Point(60, 46);
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(41, 19);
             this.titleLabel.TabIndex = 0;
@@ -60,7 +60,7 @@
             // titleTextBox
             // 
             this.titleTextBox.Font = new System.Drawing.Font("Lato Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.titleTextBox.Location = new System.Drawing.Point(169, 36);
+            this.titleTextBox.Location = new System.Drawing.Point(189, 43);
             this.titleTextBox.Name = "titleTextBox";
             this.titleTextBox.Size = new System.Drawing.Size(232, 27);
             this.titleTextBox.TabIndex = 1;
@@ -68,7 +68,7 @@
             // authorTextBox
             // 
             this.authorTextBox.Font = new System.Drawing.Font("Lato Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.authorTextBox.Location = new System.Drawing.Point(169, 65);
+            this.authorTextBox.Location = new System.Drawing.Point(189, 72);
             this.authorTextBox.Name = "authorTextBox";
             this.authorTextBox.Size = new System.Drawing.Size(232, 27);
             this.authorTextBox.TabIndex = 3;
@@ -79,7 +79,7 @@
             this.authorLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
             this.authorLabel.Font = new System.Drawing.Font("Lato Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.authorLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
-            this.authorLabel.Location = new System.Drawing.Point(40, 68);
+            this.authorLabel.Location = new System.Drawing.Point(60, 75);
             this.authorLabel.Name = "authorLabel";
             this.authorLabel.Size = new System.Drawing.Size(61, 19);
             this.authorLabel.TabIndex = 2;
@@ -88,7 +88,7 @@
             // pubHouseTextBox
             // 
             this.pubHouseTextBox.Font = new System.Drawing.Font("Lato Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.pubHouseTextBox.Location = new System.Drawing.Point(169, 94);
+            this.pubHouseTextBox.Location = new System.Drawing.Point(189, 101);
             this.pubHouseTextBox.Name = "pubHouseTextBox";
             this.pubHouseTextBox.Size = new System.Drawing.Size(232, 27);
             this.pubHouseTextBox.TabIndex = 5;
@@ -99,7 +99,7 @@
             this.publishingHouseLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
             this.publishingHouseLabel.Font = new System.Drawing.Font("Lato Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.publishingHouseLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
-            this.publishingHouseLabel.Location = new System.Drawing.Point(40, 97);
+            this.publishingHouseLabel.Location = new System.Drawing.Point(60, 104);
             this.publishingHouseLabel.Name = "publishingHouseLabel";
             this.publishingHouseLabel.Size = new System.Drawing.Size(128, 19);
             this.publishingHouseLabel.TabIndex = 4;
@@ -108,7 +108,7 @@
             // yearTextBox
             // 
             this.yearTextBox.Font = new System.Drawing.Font("Lato Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.yearTextBox.Location = new System.Drawing.Point(169, 124);
+            this.yearTextBox.Location = new System.Drawing.Point(189, 131);
             this.yearTextBox.Name = "yearTextBox";
             this.yearTextBox.Size = new System.Drawing.Size(113, 27);
             this.yearTextBox.TabIndex = 7;
@@ -119,7 +119,7 @@
             this.piblishYearLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
             this.piblishYearLabel.Font = new System.Drawing.Font("Lato Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.piblishYearLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
-            this.piblishYearLabel.Location = new System.Drawing.Point(40, 127);
+            this.piblishYearLabel.Location = new System.Drawing.Point(60, 134);
             this.piblishYearLabel.Name = "piblishYearLabel";
             this.piblishYearLabel.Size = new System.Drawing.Size(96, 19);
             this.piblishYearLabel.TabIndex = 6;
@@ -131,7 +131,7 @@
             this.pagesCountLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
             this.pagesCountLabel.Font = new System.Drawing.Font("Lato Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.pagesCountLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
-            this.pagesCountLabel.Location = new System.Drawing.Point(40, 156);
+            this.pagesCountLabel.Location = new System.Drawing.Point(60, 163);
             this.pagesCountLabel.Name = "pagesCountLabel";
             this.pagesCountLabel.Size = new System.Drawing.Size(97, 19);
             this.pagesCountLabel.TabIndex = 8;
@@ -144,7 +144,7 @@
             this.giveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.giveButton.Font = new System.Drawing.Font("Lato Thin", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.giveButton.ForeColor = System.Drawing.Color.White;
-            this.giveButton.Location = new System.Drawing.Point(44, 197);
+            this.giveButton.Location = new System.Drawing.Point(64, 204);
             this.giveButton.Name = "giveButton";
             this.giveButton.Size = new System.Drawing.Size(238, 32);
             this.giveButton.TabIndex = 10;
@@ -155,7 +155,7 @@
             // pagesCountNumericUpDown
             // 
             this.pagesCountNumericUpDown.Font = new System.Drawing.Font("Lato Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.pagesCountNumericUpDown.Location = new System.Drawing.Point(169, 154);
+            this.pagesCountNumericUpDown.Location = new System.Drawing.Point(189, 161);
             this.pagesCountNumericUpDown.Name = "pagesCountNumericUpDown";
             this.pagesCountNumericUpDown.Size = new System.Drawing.Size(113, 27);
             this.pagesCountNumericUpDown.TabIndex = 11;
