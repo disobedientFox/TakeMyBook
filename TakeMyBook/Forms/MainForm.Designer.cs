@@ -43,9 +43,9 @@
             this.menuPanel = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.settingsControl = new TakeMyBook.SettingsControl();
-            this.giveControl = new TakeMyBook.GiveControl();
+            this.giveControl = new TakeMyBook.GiveControl(pagesLabel);
             this.departmentsControl = new TakeMyBook.DepartmentsControl();
-            this.takeControl = new TakeMyBook.TakeControl();
+            this.takeControl = new TakeMyBook.TakeControl(pagesLabel);
             this.tradesControl = new TakeMyBook.TradesControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
