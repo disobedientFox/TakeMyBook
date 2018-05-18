@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TakeControl));
@@ -35,9 +36,17 @@
             this.columnComboBox = new System.Windows.Forms.ComboBox();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.booksDataGridView = new System.Windows.Forms.DataGridView();
+            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.takeButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.publishingHouseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.publishYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pagesCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.booksDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,6 +96,7 @@
             this.booksDataGridView.AllowUserToDeleteRows = false;
             this.booksDataGridView.AllowUserToResizeColumns = false;
             this.booksDataGridView.AllowUserToResizeRows = false;
+            this.booksDataGridView.AutoGenerateColumns = false;
             this.booksDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.booksDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
             this.booksDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -99,6 +109,14 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.booksDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.booksDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.booksDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.titleDataGridViewTextBoxColumn,
+            this.authorDataGridViewTextBoxColumn,
+            this.publishingHouseDataGridViewTextBoxColumn,
+            this.publishYearDataGridViewTextBoxColumn,
+            this.pagesCountDataGridViewTextBoxColumn});
+            this.booksDataGridView.DataSource = this.bookBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Lato Thin", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -116,6 +134,10 @@
             this.booksDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.booksDataGridView.Size = new System.Drawing.Size(582, 319);
             this.booksDataGridView.TabIndex = 3;
+            // 
+            // bookBindingSource
+            // 
+            this.bookBindingSource.DataSource = typeof(TakeMyBook.Book);
             // 
             // takeButton
             // 
@@ -143,6 +165,60 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            this.idDataGridViewTextBoxColumn.Width = 42;
+            // 
+            // titleDataGridViewTextBoxColumn
+            // 
+            this.titleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.titleDataGridViewTextBoxColumn.DataPropertyName = "title";
+            this.titleDataGridViewTextBoxColumn.HeaderText = "title";
+            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
+            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.titleDataGridViewTextBoxColumn.Width = 52;
+            // 
+            // authorDataGridViewTextBoxColumn
+            // 
+            this.authorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.authorDataGridViewTextBoxColumn.DataPropertyName = "author";
+            this.authorDataGridViewTextBoxColumn.HeaderText = "author";
+            this.authorDataGridViewTextBoxColumn.Name = "authorDataGridViewTextBoxColumn";
+            this.authorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.authorDataGridViewTextBoxColumn.Width = 67;
+            // 
+            // publishingHouseDataGridViewTextBoxColumn
+            // 
+            this.publishingHouseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.publishingHouseDataGridViewTextBoxColumn.DataPropertyName = "publishingHouse";
+            this.publishingHouseDataGridViewTextBoxColumn.HeaderText = "publishingHouse";
+            this.publishingHouseDataGridViewTextBoxColumn.Name = "publishingHouseDataGridViewTextBoxColumn";
+            this.publishingHouseDataGridViewTextBoxColumn.ReadOnly = true;
+            this.publishingHouseDataGridViewTextBoxColumn.Width = 121;
+            // 
+            // publishYearDataGridViewTextBoxColumn
+            // 
+            this.publishYearDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.publishYearDataGridViewTextBoxColumn.DataPropertyName = "publishYear";
+            this.publishYearDataGridViewTextBoxColumn.HeaderText = "publishYear";
+            this.publishYearDataGridViewTextBoxColumn.Name = "publishYearDataGridViewTextBoxColumn";
+            this.publishYearDataGridViewTextBoxColumn.ReadOnly = true;
+            this.publishYearDataGridViewTextBoxColumn.Width = 92;
+            // 
+            // pagesCountDataGridViewTextBoxColumn
+            // 
+            this.pagesCountDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.pagesCountDataGridViewTextBoxColumn.DataPropertyName = "pagesCount";
+            this.pagesCountDataGridViewTextBoxColumn.HeaderText = "pagesCount";
+            this.pagesCountDataGridViewTextBoxColumn.Name = "pagesCountDataGridViewTextBoxColumn";
+            this.pagesCountDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pagesCountDataGridViewTextBoxColumn.Width = 95;
+            // 
             // TakeControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -157,6 +233,7 @@
             this.Name = "TakeControl";
             this.Size = new System.Drawing.Size(800, 359);
             ((System.ComponentModel.ISupportInitialize)(this.booksDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -171,5 +248,12 @@
         private System.Windows.Forms.DataGridView booksDataGridView;
         private System.Windows.Forms.Button takeButton;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.BindingSource bookBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn authorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn publishingHouseDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn publishYearDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pagesCountDataGridViewTextBoxColumn;
     }
 }

@@ -16,5 +16,6 @@ namespace TakeMyBook
         public string publishingHouse { get; set; }
         public int publishYear { get; set; }
         public int pagesCount { get; set; }
+        public bool inStock { get; set; }
     }
 }

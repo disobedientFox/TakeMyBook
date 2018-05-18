@@ -7,18 +7,23 @@ namespace TakeMyBook
 {
     public partial class TakeControl : UserControl
     {
+        Label scoreLabel;
         public List<Book> Books { get; set; }
         public List<Department> departments { get; set; }
         BooksContext context = new BooksContext();
 
-        public TakeControl()
+
+        public TakeControl(Label label)
         {
             InitializeComponent();
 
+            scoreLabel = label;
+
             try
             {
-                Books = context.Books.ToList();
-                booksDataGridView.DataSource = Books;
+                Books = context.Books.Where(b => b.inStock == true).ToList();
+                bookBindingSource.DataSource = Books;
+                //bookBindingSource.DataSource = Books;
                 departments = context.Departments.ToList();
             }
             catch { }
@@ -28,41 +33,41 @@ namespace TakeMyBook
         private void searchTextBox_TextChanged(object sender, EventArgs e)
         {
             if (Books == null)
-                Books = context.Books.ToList();
+                Books = context.Books.Where(b => b.inStock == true).ToList();
 
             if (searchTextBox.Text.Length != 0)
             {
                 switch (columnComboBox.SelectedIndex)
                 {
                     case 0:
-                        booksDataGridView.DataSource =
+                        bookBindingSource.DataSource =
                             Books.Where(b => b.title.ToLower().Contains(searchTextBox.Text.ToLower())).ToList();
                         break;
                     case 1:
-                        booksDataGridView.DataSource =
+                        bookBindingSource.DataSource =
                             Books.Where(b => b.author.ToLower().Contains(searchTextBox.Text.ToLower())).ToList();
                         break;
                     case 2:
-                        booksDataGridView.DataSource =
+                        bookBindingSource.DataSource =
                             Books.Where(b => b.publishingHouse.ToLower().Contains(searchTextBox.Text.ToLower())).ToList();
                         break;
                     case 3:
-                        booksDataGridView.DataSource =
+                        bookBindingSource.DataSource =
                             Books.Where(b => b.publishYear.Equals(Convert.ToInt32(searchTextBox.Text.ToLower()))).ToList();
                         break;
                     case 4:
-                        booksDataGridView.DataSource =
+                        bookBindingSource.DataSource =
                             Books.Where(b => b.pagesCount > Convert.ToInt32(searchTextBox.Text)).ToList();
                         break;
                     case 5:
-                        booksDataGridView.DataSource =
+                        bookBindingSource.DataSource =
                             Books.Where(b => b.pagesCount < Convert.ToInt32(searchTextBox.Text)).ToList();
                         break;
                 }
             }
             else
             {
-                booksDataGridView.DataSource = Books;
+                bookBindingSource.DataSource = context.Books.Where(b => b.inStock == true).ToList();
             }
         }
 
@@ -78,36 +83,43 @@ namespace TakeMyBook
             }
             else
             {
-                if (ReaderInfo.departmentReader == 2000)
-                    MessageBox.Show("You need enter the department in the settings tab. Just do it, sir", "Something went wrong :c");
+                if (ReaderInfo.score > Convert.ToInt32(booksDataGridView.SelectedRows[0].Cells[5].Value))
+                {
+                    if (ReaderInfo.departmentReader == 2000)
+                        MessageBox.Show("You need enter the department in the settings tab. Just do it, sir", "Something went wrong :c");
+                    else
+                    {
+                        int idBook = Convert.ToInt32(booksDataGridView.SelectedRows[0].Cells[0].Value.ToString());
+                        var currentBook = context.Books.Single(b => b.id.Equals(idBook));
+
+                        Trade trade = new Trade
+                        {
+                            date = DateTime.Today,
+                            book = currentBook,
+                            reader = context.Readers.Where(r => r.nickname.Equals(ReaderInfo.nicknameReader)).Single(),
+                            department = context.Departments.Where(d => d.id.Equals(ReaderInfo.departmentReader)).Single(),
+                            IsGiven = false
+                        };
+
+                        context.Trades.Add(trade);
+                        currentBook.inStock = false;
+
+                        var reader = context.Readers.Single(r => r.nickname.Equals(ReaderInfo.nicknameReader));
+                        reader.spentPoints += context.Books.Single(b => b.id.Equals(idBook)).pagesCount;
+
+                        ReaderInfo.score = reader.receivedPoints - reader.spentPoints;
+                        scoreLabel.Text = ReaderInfo.score.ToString();
+
+                        context.SaveChanges();
+
+                        MessageBox.Show("Pick up your book within a week :)", "Congrats!");
+
+                        updateBooks();
+                    }
+                }
                 else
                 {
-                    // NEED TO CLEAN
-                    ReaderInfo.departmentReader = departments.Where(d => d.id == 5).Single().id;
-                    //------------------------
-
-                    int idBook = Convert.ToInt32(booksDataGridView.SelectedRows[0].Cells[0].Value.ToString());
-
-                    Trade trade = new Trade
-                    {
-                        date = DateTime.Today,
-                        book = context.Books.Where(b => b.id.Equals(idBook)).Single(),
-                        reader = context.Readers.Where(r => r.nickname.Equals(ReaderInfo.nicknameReader)).Single(),
-                        department = context.Departments.Where(d => d.id.Equals(ReaderInfo.departmentReader.id)).Single(),
-                        IsGiven = false
-                    };
-
-                    context.Trades.Add(trade);
-
-                    var entity = context.Books.Single(b => b.id == idBook);
-                    context.Entry(entity).State = System.Data.Entity.EntityState.Deleted;
-
-                    context.SaveChanges();
-
-                    MessageBox.Show("Pick up your book within a week :)", "Congrats!");
-
-                    Books = context.Books.ToList();
-                    booksDataGridView.DataSource = Books;
+                    MessageBox.Show("Not enough pages T_T", "Something went wrong :c");
                 }
             }
         }
@@ -115,6 +127,12 @@ namespace TakeMyBook
         private void columnComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             searchTextBox.Text = "";
+        }
+
+        public void updateBooks()
+        {
+            Books = context.Books.Where(b => b.inStock == true).ToList();
+            bookBindingSource.DataSource = Books;
         }
     }
 }

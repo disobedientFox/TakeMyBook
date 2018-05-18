@@ -156,6 +156,11 @@
             // 
             this.pagesCountNumericUpDown.Font = new System.Drawing.Font("Lato Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.pagesCountNumericUpDown.Location = new System.Drawing.Point(189, 161);
+            this.pagesCountNumericUpDown.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.pagesCountNumericUpDown.Name = "pagesCountNumericUpDown";
             this.pagesCountNumericUpDown.Size = new System.Drawing.Size(113, 27);
             this.pagesCountNumericUpDown.TabIndex = 11;

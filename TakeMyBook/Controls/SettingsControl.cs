@@ -124,6 +124,7 @@ namespace TakeMyBook
             {
                 var reader = context.Readers.Single(r => r.nickname == ReaderInfo.nicknameReader);
                 reader.department = myDepartment;
+                ReaderInfo.departmentReader = myDepartment.id;
                 context.SaveChanges();
             }
         }

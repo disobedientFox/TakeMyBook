@@ -18,10 +18,12 @@ namespace TakeMyBook.Forms
             try
             {
                 var reader = context.Readers.ToList().Single(r => r.nickname == nicknameTextBox.Text);
+                context.Entry(reader).Reference(r => r.department).Load();
                 if (PasswordManager.VerifyHashedPassword(reader.password, passwordTtextBox.Text))
                 {
                     ReaderInfo.nicknameReader = reader.nickname;
-                    ReaderInfo.departmentReader = reader.department.id;
+                    if(reader.department != null)
+                        ReaderInfo.departmentReader = reader.department.id;
                     ReaderInfo.score = reader.receivedPoints - reader.spentPoints;
                     ReaderInfo.idReader = reader.id;
 

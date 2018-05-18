@@ -4,17 +4,14 @@ using System.Windows.Forms;
 
 namespace TakeMyBook
 {
-    public delegate void changeScore();
 
     public partial class MainForm : Form
     {
-        public changeScore changePoints;
         private bool mouseIsDown = false;
         private Point firstPoint;
 
         public MainForm()
         {
-            changePoints = ChangeScore;
             InitializeComponent();
             pagesLabel.Text = ReaderInfo.score.ToString();
             settingsControl.Visible = false;
@@ -31,7 +28,7 @@ namespace TakeMyBook
 
         private void closeButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         
         private void takeLabel_Click(object sender, EventArgs e)
@@ -45,6 +42,7 @@ namespace TakeMyBook
             tradesControl.Visible = false;
             departmentsControl.Visible = false;
             takeControl.Visible = true;
+            takeControl.updateBooks();
         }
 
         private void giveLabel_Click(object sender, EventArgs e)
@@ -71,6 +69,7 @@ namespace TakeMyBook
             takeControl.Visible = false;
             giveControl.Visible = false;
             tradesControl.Visible = true;
+            tradesControl.updateTrades();
         }
 
         private void departmentsLabel_Click(object sender, EventArgs e)

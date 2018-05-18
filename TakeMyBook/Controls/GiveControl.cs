@@ -11,13 +11,15 @@ namespace TakeMyBook
 
     public partial class GiveControl : UserControl
     {
-        public changeScore changePoints;
+
+        Label scoreLabel;
         BooksContext context = new BooksContext();
         public List<Department> departments { get; set; }
 
-        public GiveControl()
+        public GiveControl(Label label)
         {
             InitializeComponent();
+            scoreLabel = label;
         }
 
         private void giveButton_Click(object sender, EventArgs e)
@@ -46,7 +48,8 @@ namespace TakeMyBook
                         author = authorTextBox.Text,
                         publishingHouse = pubHouseTextBox.Text,
                         publishYear = Convert.ToInt32(yearTextBox.Text),
-                        pagesCount = (int)pagesCountNumericUpDown.Value
+                        pagesCount = (int)pagesCountNumericUpDown.Value,
+                        inStock = true
                     };
 
                     context.Books.Add(newBook);
@@ -63,10 +66,12 @@ namespace TakeMyBook
                     context.Trades.Add(trade);
 
                     var reader = context.Readers.Single(r => r.nickname == ReaderInfo.nicknameReader);
-                    reader.receivedPoints = (int)pagesCountNumericUpDown.Value;
+                    reader.receivedPoints += (int)pagesCountNumericUpDown.Value;
 
                     ReaderInfo.score = reader.receivedPoints - reader.spentPoints;
-                    changePoints();
+                    scoreLabel.Text = ReaderInfo.score.ToString();
+
+                    MessageBox.Show("Thank you, sir, the points are already in your account!", "Congrats!");
 
                     context.SaveChanges();
                 }

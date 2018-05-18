@@ -126,6 +126,10 @@
     <Compile Include="Migrations\201805161609471_AddDepartmentToTableReader.Designer.cs">
       <DependentUpon>201805161609471_AddDepartmentToTableReader.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805180128102_addColumnTableBook.cs" />
+    <Compile Include="Migrations\201805180128102_addColumnTableBook.Designer.cs">
+      <DependentUpon>201805180128102_addColumnTableBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -168,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805161609471_AddDepartmentToTableReader.resx">
       <DependentUpon>201805161609471_AddDepartmentToTableReader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805180128102_addColumnTableBook.resx">
+      <DependentUpon>201805180128102_addColumnTableBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
