@@ -10,10 +10,41 @@ namespace TakeMyBook
         private bool mouseIsDown = false;
         private Point firstPoint;
 
+        private DepartmentsControl departmentsControl = new DepartmentsControl();
+        private TradesControl tradesControl = new TradesControl();
+        private GiveControl giveControl;
+        private TakeControl takeControl;
+        private SettingsControl settingsControl = new SettingsControl();
+
         public MainForm()
         {
             InitializeComponent();
-            pagesLabel.Text = ReaderInfo.score.ToString();
+            scoreBtn.Text = ReaderInfo.score.ToString();
+
+            giveControl = new GiveControl(scoreBtn);
+            takeControl = new TakeControl(scoreBtn);
+
+
+            departmentsControl.Size = new System.Drawing.Size(800, 360);
+            departmentsControl.Location = new System.Drawing.Point(0, 91);
+            Controls.Add(departmentsControl);
+
+            tradesControl.Size = new System.Drawing.Size(800, 360);
+            tradesControl.Location = new System.Drawing.Point(0, 91);
+            Controls.Add(tradesControl);
+
+            giveControl.Size = new System.Drawing.Size(800, 360);
+            giveControl.Location = new System.Drawing.Point(0, 91);
+            Controls.Add(giveControl);
+
+            takeControl.Size = new System.Drawing.Size(800, 360);
+            takeControl.Location = new System.Drawing.Point(0, 91);
+            Controls.Add(takeControl);
+
+            settingsControl.Size = new System.Drawing.Size(800, 360);
+            settingsControl.Location = new System.Drawing.Point(0, 91);
+            Controls.Add(settingsControl);
+
             settingsControl.Visible = false;
             giveControl.Visible = false;
             tradesControl.Visible = false;
@@ -43,6 +74,7 @@ namespace TakeMyBook
             departmentsControl.Visible = false;
             takeControl.Visible = true;
             takeControl.updateBooks();
+            pictureBox2.SendToBack();
         }
 
         private void giveLabel_Click(object sender, EventArgs e)
@@ -56,6 +88,7 @@ namespace TakeMyBook
             departmentsControl.Visible = false;
             takeControl.Visible = false;
             giveControl.Visible = true;
+            pictureBox2.SendToBack();
         }
 
         private void tradesLabel_Click(object sender, EventArgs e)
@@ -70,6 +103,7 @@ namespace TakeMyBook
             giveControl.Visible = false;
             tradesControl.Visible = true;
             tradesControl.updateTrades();
+            pictureBox2.SendToBack();
         }
 
         private void departmentsLabel_Click(object sender, EventArgs e)
@@ -83,6 +117,7 @@ namespace TakeMyBook
             takeControl.Visible = false;
             giveControl.Visible = false;
             departmentsControl.Visible = true;
+            pictureBox2.SendToBack();
         }
 
         private void SettingsLabel_Click(object sender, EventArgs e)
@@ -96,6 +131,7 @@ namespace TakeMyBook
             takeControl.Visible = false;
             giveControl.Visible = false;
             settingsControl.Visible = true;
+            pictureBox2.SendToBack();
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -126,7 +162,7 @@ namespace TakeMyBook
 
         public void ChangeScore()
         {
-            pagesLabel.Text = ReaderInfo.score.ToString();
+            scoreBtn.Text = ReaderInfo.score.ToString();
         }
     }
 }

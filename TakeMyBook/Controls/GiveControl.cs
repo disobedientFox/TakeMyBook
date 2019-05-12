@@ -12,14 +12,14 @@ namespace TakeMyBook
     public partial class GiveControl : UserControl
     {
 
-        Label scoreLabel;
+        Button scoreButton;
         BooksContext context = new BooksContext();
         public List<Department> departments { get; set; }
 
-        public GiveControl(Label label)
+        public GiveControl(Button button)
         {
             InitializeComponent();
-            scoreLabel = label;
+            scoreButton = button;
         }
 
         private void giveButton_Click(object sender, EventArgs e)
@@ -69,7 +69,7 @@ namespace TakeMyBook
                     reader.receivedPoints += (int)pagesCountNumericUpDown.Value;
 
                     ReaderInfo.score = reader.receivedPoints - reader.spentPoints;
-                    scoreLabel.Text = ReaderInfo.score.ToString();
+                    scoreButton.Text = ReaderInfo.score.ToString();
 
                     MessageBox.Show("Thank you, sir, the points are already in your account!", "Congrats!");
 

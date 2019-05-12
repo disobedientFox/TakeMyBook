@@ -52,7 +52,7 @@
             this.registerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
             this.registerButton.FlatAppearance.BorderSize = 0;
             this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registerButton.Font = new System.Drawing.Font("Lato Thin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.registerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.registerButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
             this.registerButton.Location = new System.Drawing.Point(155, 333);
             this.registerButton.Name = "registerButton";
@@ -64,36 +64,36 @@
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Font = new System.Drawing.Font("Lato Thin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passwordTextBox.Location = new System.Drawing.Point(155, 271);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '৹';
-            this.passwordTextBox.Size = new System.Drawing.Size(195, 25);
+            this.passwordTextBox.Size = new System.Drawing.Size(195, 24);
             this.passwordTextBox.TabIndex = 1;
             // 
             // nicknameTextBox
             // 
-            this.nicknameTextBox.Font = new System.Drawing.Font("Lato Thin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nicknameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nicknameTextBox.Location = new System.Drawing.Point(155, 209);
             this.nicknameTextBox.Name = "nicknameTextBox";
-            this.nicknameTextBox.Size = new System.Drawing.Size(195, 25);
+            this.nicknameTextBox.Size = new System.Drawing.Size(195, 24);
             this.nicknameTextBox.TabIndex = 2;
             // 
             // nameTextBox
             // 
-            this.nameTextBox.Font = new System.Drawing.Font("Lato Thin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameTextBox.Location = new System.Drawing.Point(155, 240);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(195, 25);
+            this.nameTextBox.Size = new System.Drawing.Size(195, 24);
             this.nameTextBox.TabIndex = 3;
             // 
             // confirmPasswordTextBox
             // 
-            this.confirmPasswordTextBox.Font = new System.Drawing.Font("Lato Thin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.confirmPasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.confirmPasswordTextBox.Location = new System.Drawing.Point(155, 302);
             this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
             this.confirmPasswordTextBox.PasswordChar = '৹';
-            this.confirmPasswordTextBox.Size = new System.Drawing.Size(195, 25);
+            this.confirmPasswordTextBox.Size = new System.Drawing.Size(195, 24);
             this.confirmPasswordTextBox.TabIndex = 4;
             // 
             // pictureBox1
@@ -111,11 +111,11 @@
             // 
             this.nicknameLabel.AutoSize = true;
             this.nicknameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
-            this.nicknameLabel.Font = new System.Drawing.Font("Lato Thin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nicknameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nicknameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
             this.nicknameLabel.Location = new System.Drawing.Point(19, 212);
             this.nicknameLabel.Name = "nicknameLabel";
-            this.nicknameLabel.Size = new System.Drawing.Size(75, 18);
+            this.nicknameLabel.Size = new System.Drawing.Size(79, 18);
             this.nicknameLabel.TabIndex = 8;
             this.nicknameLabel.Text = "Nickname:";
             // 
@@ -123,11 +123,11 @@
             // 
             this.nameLabel.AutoSize = true;
             this.nameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
-            this.nameLabel.Font = new System.Drawing.Font("Lato Thin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
             this.nameLabel.Location = new System.Drawing.Point(19, 243);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(50, 18);
+            this.nameLabel.Size = new System.Drawing.Size(52, 18);
             this.nameLabel.TabIndex = 9;
             this.nameLabel.Text = "Name:";
             // 
@@ -135,11 +135,11 @@
             // 
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
-            this.passwordLabel.Font = new System.Drawing.Font("Lato Thin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passwordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
             this.passwordLabel.Location = new System.Drawing.Point(19, 274);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(72, 18);
+            this.passwordLabel.Size = new System.Drawing.Size(79, 18);
             this.passwordLabel.TabIndex = 10;
             this.passwordLabel.Text = "Password:";
             // 
@@ -147,11 +147,11 @@
             // 
             this.confirmPasswordLabel.AutoSize = true;
             this.confirmPasswordLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
-            this.confirmPasswordLabel.Font = new System.Drawing.Font("Lato Thin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.confirmPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.confirmPasswordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
             this.confirmPasswordLabel.Location = new System.Drawing.Point(19, 305);
             this.confirmPasswordLabel.Name = "confirmPasswordLabel";
-            this.confirmPasswordLabel.Size = new System.Drawing.Size(126, 18);
+            this.confirmPasswordLabel.Size = new System.Drawing.Size(134, 18);
             this.confirmPasswordLabel.TabIndex = 11;
             this.confirmPasswordLabel.Text = "Confirm password:";
             // 
@@ -162,7 +162,7 @@
             this.loginButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(217)))));
             this.loginButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(217)))));
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginButton.Font = new System.Drawing.Font("Lato Thin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.loginButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
             this.loginButton.Location = new System.Drawing.Point(12, 409);
             this.loginButton.Name = "loginButton";
@@ -209,6 +209,9 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 30);
             this.panel1.TabIndex = 13;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // RegisterForm
             // 

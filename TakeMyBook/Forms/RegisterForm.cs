@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -7,6 +8,9 @@ namespace TakeMyBook.Forms
 {
     public partial class RegisterForm : Form
     {
+        private bool mouseIsDown = false;
+        private Point firstPoint;
+
         BooksContext context = new BooksContext();
 
         public RegisterForm()
@@ -64,6 +68,32 @@ namespace TakeMyBook.Forms
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
             Hide();
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            firstPoint = e.Location;
+            mouseIsDown = true;
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseIsDown = false;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseIsDown)
+            {
+                // Get the difference between the two points
+                int xDiff = firstPoint.X - e.Location.X;
+                int yDiff = firstPoint.Y - e.Location.Y;
+
+                // Set the new point
+                int x = this.Location.X - xDiff;
+                int y = this.Location.Y - yDiff;
+                this.Location = new Point(x, y);
+            }
         }
     }
 }

@@ -39,14 +39,9 @@
             this.departmentsLabel = new System.Windows.Forms.Label();
             this.SettingsLabel = new System.Windows.Forms.Label();
             this.pagesTextLabel = new System.Windows.Forms.Label();
-            this.pagesLabel = new System.Windows.Forms.Label();
             this.menuPanel = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.settingsControl = new TakeMyBook.SettingsControl();
-            this.giveControl = new TakeMyBook.GiveControl(pagesLabel);
-            this.departmentsControl = new TakeMyBook.DepartmentsControl();
-            this.takeControl = new TakeMyBook.TakeControl(pagesLabel);
-            this.tradesControl = new TakeMyBook.TradesControl();
+            this.scoreBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -106,11 +101,11 @@
             // takeLabel
             // 
             this.takeLabel.AutoSize = true;
-            this.takeLabel.Font = new System.Drawing.Font("Lato Thin", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.takeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.takeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(16)))), ((int)(((byte)(28)))));
             this.takeLabel.Location = new System.Drawing.Point(27, 46);
             this.takeLabel.Name = "takeLabel";
-            this.takeLabel.Size = new System.Drawing.Size(53, 27);
+            this.takeLabel.Size = new System.Drawing.Size(59, 26);
             this.takeLabel.TabIndex = 10;
             this.takeLabel.Text = "Take";
             this.takeLabel.Click += new System.EventHandler(this.takeLabel_Click);
@@ -118,11 +113,11 @@
             // giveLabel
             // 
             this.giveLabel.AutoSize = true;
-            this.giveLabel.Font = new System.Drawing.Font("Lato Thin", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.giveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.giveLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(16)))), ((int)(((byte)(28)))));
             this.giveLabel.Location = new System.Drawing.Point(128, 46);
             this.giveLabel.Name = "giveLabel";
-            this.giveLabel.Size = new System.Drawing.Size(55, 27);
+            this.giveLabel.Size = new System.Drawing.Size(57, 26);
             this.giveLabel.TabIndex = 11;
             this.giveLabel.Text = "Give";
             this.giveLabel.Click += new System.EventHandler(this.giveLabel_Click);
@@ -130,11 +125,11 @@
             // tradesLabel
             // 
             this.tradesLabel.AutoSize = true;
-            this.tradesLabel.Font = new System.Drawing.Font("Lato Thin", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tradesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tradesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(16)))), ((int)(((byte)(28)))));
             this.tradesLabel.Location = new System.Drawing.Point(229, 46);
             this.tradesLabel.Name = "tradesLabel";
-            this.tradesLabel.Size = new System.Drawing.Size(73, 27);
+            this.tradesLabel.Size = new System.Drawing.Size(78, 26);
             this.tradesLabel.TabIndex = 12;
             this.tradesLabel.Text = "Trades";
             this.tradesLabel.Click += new System.EventHandler(this.tradesLabel_Click);
@@ -142,11 +137,11 @@
             // departmentsLabel
             // 
             this.departmentsLabel.AutoSize = true;
-            this.departmentsLabel.Font = new System.Drawing.Font("Lato Thin", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.departmentsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.departmentsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(16)))), ((int)(((byte)(28)))));
             this.departmentsLabel.Location = new System.Drawing.Point(512, 46);
             this.departmentsLabel.Name = "departmentsLabel";
-            this.departmentsLabel.Size = new System.Drawing.Size(135, 27);
+            this.departmentsLabel.Size = new System.Drawing.Size(137, 26);
             this.departmentsLabel.TabIndex = 13;
             this.departmentsLabel.Text = "Departments";
             this.departmentsLabel.Click += new System.EventHandler(this.departmentsLabel_Click);
@@ -154,11 +149,11 @@
             // SettingsLabel
             // 
             this.SettingsLabel.AutoSize = true;
-            this.SettingsLabel.Font = new System.Drawing.Font("Lato Thin", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SettingsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SettingsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(16)))), ((int)(((byte)(28)))));
             this.SettingsLabel.Location = new System.Drawing.Point(685, 46);
             this.SettingsLabel.Name = "SettingsLabel";
-            this.SettingsLabel.Size = new System.Drawing.Size(86, 27);
+            this.SettingsLabel.Size = new System.Drawing.Size(91, 26);
             this.SettingsLabel.TabIndex = 14;
             this.SettingsLabel.Text = "Settings";
             this.SettingsLabel.Click += new System.EventHandler(this.SettingsLabel_Click);
@@ -167,29 +162,13 @@
             // 
             this.pagesTextLabel.AutoSize = true;
             this.pagesTextLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
-            this.pagesTextLabel.Font = new System.Drawing.Font("Lato Thin", 10F);
+            this.pagesTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.pagesTextLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
             this.pagesTextLabel.Location = new System.Drawing.Point(378, 33);
             this.pagesTextLabel.Name = "pagesTextLabel";
-            this.pagesTextLabel.Size = new System.Drawing.Size(46, 17);
+            this.pagesTextLabel.Size = new System.Drawing.Size(52, 17);
             this.pagesTextLabel.TabIndex = 15;
             this.pagesTextLabel.Text = "Pages:";
-            // 
-            // pagesLabel
-            // 
-            this.pagesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pagesLabel.AutoSize = true;
-            this.pagesLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
-            this.pagesLabel.Font = new System.Drawing.Font("Lato Thin", 17F, System.Drawing.FontStyle.Bold);
-            this.pagesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
-            this.pagesLabel.Location = new System.Drawing.Point(368, 50);
-            this.pagesLabel.Name = "pagesLabel";
-            this.pagesLabel.Padding = new System.Windows.Forms.Padding(5);
-            this.pagesLabel.Size = new System.Drawing.Size(64, 38);
-            this.pagesLabel.TabIndex = 16;
-            this.pagesLabel.Text = "655";
-            this.pagesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // menuPanel
             // 
@@ -210,51 +189,19 @@
             this.pictureBox2.TabIndex = 23;
             this.pictureBox2.TabStop = false;
             // 
-            // settingsControl
+            // scoreBtn
             // 
-            this.settingsControl.departments = null;
-            this.settingsControl.Font = new System.Drawing.Font("Lato Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.settingsControl.Location = new System.Drawing.Point(0, 68);
-            this.settingsControl.Margin = new System.Windows.Forms.Padding(4);
-            this.settingsControl.Name = "settingsControl";
-            this.settingsControl.Size = new System.Drawing.Size(800, 382);
-            this.settingsControl.TabIndex = 20;
-            // 
-            // giveControl
-            // 
-            this.giveControl.departments = null;
-            this.giveControl.Location = new System.Drawing.Point(0, 91);
-            this.giveControl.Name = "giveControl";
-            this.giveControl.Size = new System.Drawing.Size(800, 359);
-            this.giveControl.TabIndex = 19;
-            // 
-            // departmentsControl
-            // 
-            this.departmentsControl.departments = null;
-            this.departmentsControl.Font = new System.Drawing.Font("Lato Thin", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.departmentsControl.Location = new System.Drawing.Point(0, 91);
-            this.departmentsControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.departmentsControl.Name = "departmentsControl";
-            this.departmentsControl.Size = new System.Drawing.Size(800, 359);
-            this.departmentsControl.TabIndex = 18;
-            // 
-            // takeControl
-            // 
-            this.takeControl.Books = null;
-            this.takeControl.departments = null;
-            this.takeControl.Font = new System.Drawing.Font("Lato Thin", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.takeControl.Location = new System.Drawing.Point(0, 91);
-            this.takeControl.Name = "takeControl";
-            this.takeControl.Size = new System.Drawing.Size(800, 359);
-            this.takeControl.TabIndex = 22;
-            // 
-            // tradesControl
-            // 
-            this.tradesControl.Location = new System.Drawing.Point(0, 91);
-            this.tradesControl.Name = "tradesControl";
-            this.tradesControl.Size = new System.Drawing.Size(800, 359);
-            this.tradesControl.TabIndex = 21;
-            this.tradesControl.trades = null;
+            this.scoreBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
+            this.scoreBtn.FlatAppearance.BorderSize = 0;
+            this.scoreBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.scoreBtn.Font = new System.Drawing.Font("Impact", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
+            this.scoreBtn.Location = new System.Drawing.Point(352, 53);
+            this.scoreBtn.Name = "scoreBtn";
+            this.scoreBtn.Size = new System.Drawing.Size(101, 36);
+            this.scoreBtn.TabIndex = 24;
+            this.scoreBtn.Text = "116";
+            this.scoreBtn.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
@@ -262,9 +209,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.scoreBtn);
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pagesLabel);
             this.Controls.Add(this.pagesTextLabel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.SettingsLabel);
@@ -272,11 +219,6 @@
             this.Controls.Add(this.tradesLabel);
             this.Controls.Add(this.giveLabel);
             this.Controls.Add(this.takeLabel);
-            this.Controls.Add(this.settingsControl);
-            this.Controls.Add(this.giveControl);
-            this.Controls.Add(this.departmentsControl);
-            this.Controls.Add(this.takeControl);
-            this.Controls.Add(this.tradesControl);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
@@ -302,14 +244,9 @@
         private System.Windows.Forms.Label departmentsLabel;
         private System.Windows.Forms.Label SettingsLabel;
         private System.Windows.Forms.Label pagesTextLabel;
-        private System.Windows.Forms.Label pagesLabel;
         private System.Windows.Forms.Panel menuPanel;
-        private DepartmentsControl departmentsControl;
-        private GiveControl giveControl;
-        private SettingsControl settingsControl;
-        private TradesControl tradesControl;
-        private TakeControl takeControl;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button scoreBtn;
     }
 }
 

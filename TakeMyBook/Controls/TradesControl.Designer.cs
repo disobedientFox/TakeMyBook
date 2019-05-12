@@ -33,13 +33,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TradesControl));
             this.tradesDataGridView = new System.Windows.Forms.DataGridView();
-            this.tradeViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isGivenDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tradeViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.tradesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tradeViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,7 +52,7 @@
             this.tradesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lato Thin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -68,7 +68,7 @@
             this.tradesDataGridView.DataSource = this.tradeViewBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lato Thin", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -76,28 +76,16 @@
             this.tradesDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.tradesDataGridView.Location = new System.Drawing.Point(19, 30);
             this.tradesDataGridView.Name = "tradesDataGridView";
+            this.tradesDataGridView.ReadOnly = true;
             this.tradesDataGridView.Size = new System.Drawing.Size(765, 317);
             this.tradesDataGridView.TabIndex = 0;
-            // 
-            // tradeViewBindingSource
-            // 
-            this.tradeViewBindingSource.DataSource = typeof(TakeMyBook.TradeView);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(800, 359);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
             this.idDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.Visible = false;
             // 
             // bookDataGridViewTextBoxColumn
@@ -107,7 +95,7 @@
             this.bookDataGridViewTextBoxColumn.HeaderText = "Book";
             this.bookDataGridViewTextBoxColumn.Name = "bookDataGridViewTextBoxColumn";
             this.bookDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bookDataGridViewTextBoxColumn.Width = 64;
+            this.bookDataGridViewTextBoxColumn.Width = 65;
             // 
             // departmentDataGridViewTextBoxColumn
             // 
@@ -132,6 +120,21 @@
             this.isGivenDataGridViewCheckBoxColumn.DataPropertyName = "IsGiven";
             this.isGivenDataGridViewCheckBoxColumn.HeaderText = "Was given";
             this.isGivenDataGridViewCheckBoxColumn.Name = "isGivenDataGridViewCheckBoxColumn";
+            this.isGivenDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // tradeViewBindingSource
+            // 
+            this.tradeViewBindingSource.DataSource = typeof(TakeMyBook.TradeView);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(800, 359);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // TradesControl
             // 

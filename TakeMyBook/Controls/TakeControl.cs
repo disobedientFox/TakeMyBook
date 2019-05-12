@@ -7,23 +7,22 @@ namespace TakeMyBook
 {
     public partial class TakeControl : UserControl
     {
-        Label scoreLabel;
+        Button scoreButton;
         public List<Book> Books { get; set; }
         public List<Department> departments { get; set; }
         BooksContext context = new BooksContext();
 
 
-        public TakeControl(Label label)
+        public TakeControl(Button button)
         {
             InitializeComponent();
 
-            scoreLabel = label;
+            scoreButton = button;
 
             try
             {
                 Books = context.Books.Where(b => b.inStock == true).ToList();
                 bookBindingSource.DataSource = Books;
-                //bookBindingSource.DataSource = Books;
                 departments = context.Departments.ToList();
             }
             catch { }
@@ -108,7 +107,7 @@ namespace TakeMyBook
                         reader.spentPoints += context.Books.Single(b => b.id.Equals(idBook)).pagesCount;
 
                         ReaderInfo.score = reader.receivedPoints - reader.spentPoints;
-                        scoreLabel.Text = ReaderInfo.score.ToString();
+                        scoreButton.Text = ReaderInfo.score.ToString();
 
                         context.SaveChanges();
 

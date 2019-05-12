@@ -45,21 +45,21 @@
             // 
             // nicknameTextBox
             // 
-            this.nicknameTextBox.Font = new System.Drawing.Font("Lato Thin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nicknameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nicknameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
             this.nicknameTextBox.Location = new System.Drawing.Point(590, 252);
             this.nicknameTextBox.Name = "nicknameTextBox";
-            this.nicknameTextBox.Size = new System.Drawing.Size(186, 25);
+            this.nicknameTextBox.Size = new System.Drawing.Size(186, 24);
             this.nicknameTextBox.TabIndex = 0;
             // 
             // passwordTtextBox
             // 
-            this.passwordTtextBox.Font = new System.Drawing.Font("Lato Thin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passwordTtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passwordTtextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
             this.passwordTtextBox.Location = new System.Drawing.Point(590, 282);
             this.passwordTtextBox.Name = "passwordTtextBox";
             this.passwordTtextBox.PasswordChar = '৹';
-            this.passwordTtextBox.Size = new System.Drawing.Size(186, 25);
+            this.passwordTtextBox.Size = new System.Drawing.Size(186, 24);
             this.passwordTtextBox.TabIndex = 1;
             // 
             // loginButton
@@ -67,7 +67,7 @@
             this.loginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
             this.loginButton.FlatAppearance.BorderSize = 0;
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginButton.Font = new System.Drawing.Font("Lato Thin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.loginButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
             this.loginButton.Location = new System.Drawing.Point(590, 324);
             this.loginButton.Name = "loginButton";
@@ -86,6 +86,9 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 30);
             this.panel1.TabIndex = 7;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // minButton
             // 
@@ -118,22 +121,24 @@
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Font = new System.Drawing.Font("Lato Thin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passwordLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
+            this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passwordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
             this.passwordLabel.Location = new System.Drawing.Point(502, 285);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(72, 18);
+            this.passwordLabel.Size = new System.Drawing.Size(79, 18);
             this.passwordLabel.TabIndex = 12;
             this.passwordLabel.Text = "Password:";
             // 
             // nicknameLabel
             // 
             this.nicknameLabel.AutoSize = true;
-            this.nicknameLabel.Font = new System.Drawing.Font("Lato Thin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nicknameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(239)))), ((int)(((byte)(223)))));
+            this.nicknameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nicknameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
             this.nicknameLabel.Location = new System.Drawing.Point(499, 255);
             this.nicknameLabel.Name = "nicknameLabel";
-            this.nicknameLabel.Size = new System.Drawing.Size(75, 18);
+            this.nicknameLabel.Size = new System.Drawing.Size(79, 18);
             this.nicknameLabel.TabIndex = 11;
             this.nicknameLabel.Text = "Nickname:";
             // 
@@ -144,7 +149,7 @@
             this.registerButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(217)))));
             this.registerButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(217)))));
             this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registerButton.Font = new System.Drawing.Font("Lato Thin", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.registerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.registerButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(1)))), ((int)(((byte)(29)))));
             this.registerButton.Location = new System.Drawing.Point(590, 410);
             this.registerButton.Name = "registerButton";
