@@ -4,12 +4,15 @@ using System.Windows.Forms;
 
 namespace TakeMyBook
 {
-
+    /// <summary>
+    /// Class for main form form
+    /// </summary>
     public partial class MainForm : Form
     {
         private bool mouseIsDown = false;
         private Point firstPoint;
 
+        // cteating usercontrols
         private DepartmentsControl departmentsControl = new DepartmentsControl();
         private TradesControl tradesControl = new TradesControl();
         private GiveControl giveControl;
@@ -21,9 +24,9 @@ namespace TakeMyBook
             InitializeComponent();
             scoreBtn.Text = ReaderInfo.score.ToString();
 
+            // Settings for the custom usercontrols
             giveControl = new GiveControl(scoreBtn);
             takeControl = new TakeControl(scoreBtn);
-
 
             departmentsControl.Size = new System.Drawing.Size(800, 360);
             departmentsControl.Location = new System.Drawing.Point(0, 91);

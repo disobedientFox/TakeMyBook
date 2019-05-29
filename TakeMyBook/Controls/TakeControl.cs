@@ -5,6 +5,9 @@ using System.Windows.Forms;
 
 namespace TakeMyBook
 {
+    /// <summary>
+    /// Class for take control 
+    /// </summary>
     public partial class TakeControl : UserControl
     {
         Button scoreButton;
@@ -29,6 +32,8 @@ namespace TakeMyBook
 
         }
 
+
+        // Search logic
         private void searchTextBox_TextChanged(object sender, EventArgs e)
         {
             if (Books == null)
@@ -70,19 +75,20 @@ namespace TakeMyBook
             }
         }
 
+        // Take book logic
         private void takeButton_Click(object sender, EventArgs e)
         {
-            if (booksDataGridView.SelectedRows.Count == 0)
+            if (booksDataGridView.SelectedRows.Count == 0) // If user didnt select the book
             {
                 MessageBox.Show("Please, select at least one book, sir", "Something went wrong :c");
             }
-            else if (booksDataGridView.SelectedRows.Count > 1)
+            else if (booksDataGridView.SelectedRows.Count > 1) // If user select more than one book
             {
                 MessageBox.Show("Please, select only one book, sir", "Something went wrong :c");
             }
             else
             {
-                if (ReaderInfo.score > Convert.ToInt32(booksDataGridView.SelectedRows[0].Cells[5].Value))
+                if (ReaderInfo.score > Convert.ToInt32(booksDataGridView.SelectedRows[0].Cells[5].Value)) // Take the count of pages
                 {
                     if (ReaderInfo.departmentReader == 2000)
                         MessageBox.Show("You need enter the department in the settings tab. Just do it, sir", "Something went wrong :c");
@@ -91,6 +97,7 @@ namespace TakeMyBook
                         int idBook = Convert.ToInt32(booksDataGridView.SelectedRows[0].Cells[0].Value.ToString());
                         var currentBook = context.Books.Single(b => b.id.Equals(idBook));
 
+                        // Create a new trade
                         Trade trade = new Trade
                         {
                             date = DateTime.Today,
@@ -106,6 +113,7 @@ namespace TakeMyBook
                         var reader = context.Readers.Single(r => r.nickname.Equals(ReaderInfo.nicknameReader));
                         reader.spentPoints += context.Books.Single(b => b.id.Equals(idBook)).pagesCount;
 
+                        // save score
                         ReaderInfo.score = reader.receivedPoints - reader.spentPoints;
                         scoreButton.Text = ReaderInfo.score.ToString();
 
@@ -128,6 +136,7 @@ namespace TakeMyBook
             searchTextBox.Text = "";
         }
 
+        // Update the books list
         public void updateBooks()
         {
             Books = context.Books.Where(b => b.inStock == true).ToList();

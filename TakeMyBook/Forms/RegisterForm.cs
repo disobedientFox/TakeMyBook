@@ -6,6 +6,9 @@ using System.Windows.Forms;
 
 namespace TakeMyBook.Forms
 {
+    /// <summary>
+    /// Class for register form
+    /// </summary>
     public partial class RegisterForm : Form
     {
         private bool mouseIsDown = false;
@@ -18,12 +21,14 @@ namespace TakeMyBook.Forms
             InitializeComponent();
         }
 
+        // Register button logic
         private void registerButton_Click(object sender, EventArgs e)
         {
-            if (context.Readers.ToList().Where(r => r.nickname == nicknameTextBox.Text).Count() == 0)
+            if (context.Readers.ToList().Where(r => r.nickname == nicknameTextBox.Text).Count() == 0) // Сheck nick's uniqueness
             {
-                if (passwordTextBox.Text.Equals(confirmPasswordTextBox.Text))
+                if (passwordTextBox.Text.Equals(confirmPasswordTextBox.Text)) // Check the password 
                 {
+                    // Creating a new user
                     Reader reader = new Reader();
                     reader.name = nameTextBox.Text;
                     reader.nickname = nicknameTextBox.Text;
@@ -36,18 +41,20 @@ namespace TakeMyBook.Forms
                         ctx.Readers.Add(reader);
                         ctx.SaveChanges();
                     }
+
+                    // Open Main Form
                     MessageBox.Show("User was successfully created", "Congrats");
                     LoginForm loginForm = new LoginForm();
                     loginForm.Show();
                     Hide();
                 }
-                else
+                else // If passwords dont match
                 {
                     MessageBox.Show("Passwords don't match", "Pay attention");
                     passwordTextBox.Text = "";
                     confirmPasswordTextBox.Text = "";
                 }
-            }else
+            }else // If user already exists
             {
                 MessageBox.Show("User already exists", "Something went wrong :c");
             }
@@ -63,6 +70,8 @@ namespace TakeMyBook.Forms
             this.WindowState = FormWindowState.Minimized;
         }
 
+
+        // Back to login form
         private void loginButton_Click(object sender, EventArgs e)
         {
             LoginForm loginForm = new LoginForm();

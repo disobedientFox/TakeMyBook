@@ -5,6 +5,9 @@ using System.Windows.Forms;
 
 namespace TakeMyBook.Forms
 {
+    /// <summary>
+    /// Class for login form
+    /// </summary>
     public partial class LoginForm : Form
     {
         private bool mouseIsDown = false;
@@ -18,13 +21,14 @@ namespace TakeMyBook.Forms
             MainForm mainForm = new MainForm();
         }
 
+        // Login button logic
         private void loginButton_Click(object sender, EventArgs e)
         {
             try
             {
-                var reader = context.Readers.ToList().Single(r => r.nickname == nicknameTextBox.Text);
+                var reader = context.Readers.ToList().Single(r => r.nickname == nicknameTextBox.Text); // Find current user
                 context.Entry(reader).Reference(r => r.department).Load();
-                if (PasswordManager.VerifyHashedPassword(reader.password, passwordTtextBox.Text))
+                if (PasswordManager.VerifyHashedPassword(reader.password, passwordTtextBox.Text)) // Check the password
                 {
                     ReaderInfo.nicknameReader = reader.nickname;
                     if(reader.department != null)
@@ -32,13 +36,15 @@ namespace TakeMyBook.Forms
                     ReaderInfo.score = reader.receivedPoints - reader.spentPoints;
                     ReaderInfo.idReader = reader.id;
 
+
+                    // Go to main form
                     MainForm mainForm = new MainForm();
                     mainForm.Show();
                     Hide();
                 }
                 else
                 {
-                    MessageBox.Show("Incorrect password", "Something went wrong :c");
+                    MessageBox.Show("Incorrect password", "Something went wrong :c"); 
                 }
             }
             catch
@@ -47,6 +53,7 @@ namespace TakeMyBook.Forms
             }
         }
 
+        // Go to Register form
         private void registerButton_Click(object sender, EventArgs e)
         {
             RegisterForm registerForm = new RegisterForm();
