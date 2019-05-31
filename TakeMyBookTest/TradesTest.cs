@@ -37,6 +37,13 @@ namespace TakeMyBookTest
         }
 
         [TestMethod]
+        public void FailAddingBook()
+        {
+            TradesService Trades = new TradesService();
+            Assert.ThrowsException<ArgumentNullException>(() => Trades.AddBook(null));
+        }
+
+        [TestMethod]
         public void FailGettingUser()
         {
             TradesService Trades = new TradesService();

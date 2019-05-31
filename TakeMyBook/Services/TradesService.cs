@@ -9,9 +9,11 @@ namespace TakeMyBook.Services
 
         public TradesService()
         {
+            // context do bazy danncyh EF
             context = new BooksContext();
         }
 
+        // pobieranie danych o moich oddanych książkach
         public IEnumerable<TradeView> GetTrades()
         {
             var trades = context.Trades.Where(t => t.reader.nickname == ReaderInfo.nicknameReader).ToList();
@@ -36,17 +38,20 @@ namespace TakeMyBook.Services
             return tradesView;
         }
 
+        // pobieranie listy dostępnych punktów do oddania książek
         public IEnumerable<Department> GetDepartments()
         {
             return context.Departments.ToList();
         }
 
+        // pobieranie danych użytkownika
         public Reader GetReader(string nicknameReader)
         {
             return context.Readers
                 .FirstOrDefault(r => r.nickname.Equals(nicknameReader));
         }
 
+        // dodawanie książki do bazy
         public Book AddBook(Book entity)
         {
             var result = context.Books.Add(entity);
@@ -55,6 +60,7 @@ namespace TakeMyBook.Services
             return result;
         }
 
+        // dodawanie wpisu o oddanej książce do bazy
         public Trade AddTrade(Trade entity)
         {
             var result = context.Trades.Add(entity);
